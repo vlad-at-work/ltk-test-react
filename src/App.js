@@ -10,13 +10,10 @@ import { useNavigate } from 'react-router-dom';
 
 export default function App() {
 	const [openForm, setOpenForm] = React.useState(false);
+	const navigate = useNavigate();
+
 	const handleOnClick = (page) => {
-		console.log('open');
-		if(!openForm) { 
-			setOpenForm(true)
-		} else {
-			setOpenForm(false)
-		}
+		navigate('/todo');
 	};
   return (
     <Container maxWidth="sm">
