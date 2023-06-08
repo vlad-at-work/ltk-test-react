@@ -3,10 +3,9 @@ import Box from '@mui/material/Box';
 import Avatar from '@mui/material/Avatar';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
-import ListItemIcon from '@mui/material/ListItemIcon';
-import Divider from '@mui/material/Divider';
 import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
+import { Button } from '@mui/material';
 import Tooltip from '@mui/material/Tooltip';
 // import PersonAdd from '@mui/icons-material/PersonAdd';
 // import Settings from '@mui/icons-material/Settings';
@@ -23,9 +22,13 @@ export default function AccountMenu({ onClick }) {
   };
   return (
     <React.Fragment>
-      <Box sx={{ display: 'flex', alignItems: 'center', textAlign: 'center' }}>
-        <Typography sx={{ minWidth: 100 }}>Contact</Typography>
-        <Typography sx={{ minWidth: 100 }}>profile</Typography>
+      <Box sx={{ display: 'flex', justifyContent: 'space-between', textAlign: 'center', padding: '25px' }}>
+
+      <Button variant="outlined">Contact</Button>
+      <Button variant="outlined">Profile</Button>
+
+        {/* <Typography sx={{ minWidth: 100 }}>Contact</Typography>
+        <Typography sx={{ minWidth: 100 }}>Profile</Typography> */}
         <Tooltip title="Account settings">
           <IconButton
             onClick={handleClick}
