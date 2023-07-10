@@ -10,7 +10,7 @@ import Tooltip from '@mui/material/Tooltip';
 
 export default function AccountMenu({ onClick }) {
   const [anchorEl, setAnchorEl] = React.useState(null);
-  const open = Boolean(anchorEl);
+  const open = Boolean(anchorEl); // don't like this naming
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
   };

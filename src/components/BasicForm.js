@@ -4,7 +4,7 @@ import ReactDOM from 'react-dom';
 import { Formik, Field, useField, Form } from 'formik';
 import { v4 as uuidv4 } from 'uuid';
 import { useNavigate } from 'react-router-dom';
-import { Container, TableBody, TableContainer, TableHead, TableRow, TableCell, Table, TextField, Button, Box} from '@mui/material';
+import { Container, TableBody, TableContainer, TableHead, TableRow, TableCell, Table, TextField, Button, Box } from '@mui/material';
 
 const BasicForm = () => {
 
@@ -21,25 +21,38 @@ const BasicForm = () => {
   })
 
   return (
-    <div>
+    <Container maxWidth="md">
       <h1>TODO</h1>
       <Formik
         initialValues={{
           firstName: '',
           lastName: '',
           email: '',
+          addtoDo: ''
         }}
         onSubmit={(values) => {
-          
+
         }}
       >
         <Form>
-          <label htmlFor="todo">Add ToDo </label>
-          <Field id="todo" name="Add ToDo" placeholder="TextHere" />
-          <button type="submit">Submit</button>
+          <Box sx={ { display: 'flex', flexDirection: 'column', alignCenter: 'center', gap: 2, mt: 3 }}>
+            <label htmlFor="todo">First Name</label>
+            <br />
+              <Field name="firstName" placeholder="" />
+            <label htmlFor="todo"> </label>
+            <br />
+              <Field id="lastName" placeholder="TextHere" />
+            <label htmlFor="todo"></label>
+            <br />
+              <Field id="email" placeholder="TextHere" />
+            <label htmlFor="todo"></label>
+            <br />
+              <Field id="addToDo" placeholder="TextHere" />
+            <Button variant="outlined" type="submit">Submit</Button>
+          </Box>
         </Form>
       </Formik>
-    </div>
+    </Container>
   )
 }
 
